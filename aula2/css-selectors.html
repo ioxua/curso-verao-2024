@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* child selector */
+        li {
+            background-color: red;
+        }
+
+        ul li {
+            text-decoration: underline;
+        }
+
+        ul>li {
+            background-color: rebeccapurple;
+        }
+
+        /* attr selector */
+        .texto-chique {
+            font-family: cursive;
+        }
+
+        [class*="bravo"] {
+            color: red;
+        }
+
+        [class="texto-chique"] {
+            color: rebeccapurple;
+        }
+
+        /* pseudo classes */
+        ul li:nth-child(2n) {
+            color: white;
+        }
+
+        input:placeholder-shown {
+            background-color: red;
+            color: white;
+        }
+
+        input:disabled {
+            font-family: cursive;
+        }
+
+        button:hover {
+            padding: 15px;
+            font-weight: 600;
+            border: 3px dotted black;
+        }
+
+        /* css props */
+        .star {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>/* child selector */</h1>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>
+            <ol>
+                <span>
+                    <li>subitem 1</li>
+                </span>
+                <li>subitem 2</li>
+                <li>subitem 3</li>
+                <li>subitem 4</li>
+            </ol>
+        </li>
+    </ul>
+
+    <h1>/* attr selector */</h1>
+    <h2 class="texto-chique">example 1</h2>
+    <h2 class="texto-chique texto-bravo">example 2</h2>
+    <h2 class="bravo-pra-caramba">example 2</h2>
+
+    <h1>/* pseudo classes */</h1>
+    <button>Passe o mouse em mim!</button>
+
+    <input type="text" placeholder="Digite algo aqui">
+    <input type="text" placeholder="Aqui vc n consegue" disabled>
+
+    <h1>/* css props */</h1>
+    <div class="star"></div>
+</body>
+
+</html>

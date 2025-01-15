@@ -1,0 +1,102 @@
+:root {
+    --pad-pagina: 30px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(195, 195, 195);
+    padding: 15px var(--pad-pagina);
+
+    h1 {
+        text-align: center;
+        margin-top: 0;
+    }
+}
+
+header nav {
+    display: inline-block;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+header .cta {
+    float: right;
+}
+
+main {
+    padding: 0px var(--pad-pagina);
+}
+
+main aside {
+    float: left;
+    width: 40%;
+}
+
+main article {
+    float: right;
+    width: 60%;
+}
+
+aside {
+    img {
+        display: block;
+        max-width: 220px;
+    }
+
+    a {
+        text-align: center;
+    }
+}
+
+footer {
+    padding: 40px var(--pad-pagina);
+    background-color: rgb(201, 201, 201);
+
+    h1 {
+        display: inline;
+        margin: 0;
+    }
+
+    .socials {
+        float: right;
+    }
+
+    .socials a {
+        color: black;
+        text-decoration: none;
+
+        &.x:hover {
+            color: rgb(95, 95, 95);
+        }
+
+        &.fb:hover {
+            color: blue;
+        }
+
+        &.insta:hover {
+            color: red;
+        }
+    }
+}
+
+/* https://www.w3schools.com/howto/howto_css_clearfix.asp */
+/* ::after é um pseudo elemento */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
