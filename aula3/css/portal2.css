@@ -1,0 +1,118 @@
+:root {
+    --pad-pagina: 30px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(195, 195, 195);
+    padding: 15px var(--pad-pagina);
+
+    h1 {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    section {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+header nav {
+    display: inline-block;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+/* TODO: corrigir o wrap entre <aside> e <article> para "responsividade" */
+main {
+    grid-area: main;
+    padding: 0px var(--pad-pagina);
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+main aside {
+    /* width: 40%; */
+    /* min-width: 200px; */
+    /* flex-grow: 1; */
+}
+
+main article {
+    /* width: 60%; */
+    flex-grow: 1;
+}
+
+aside {
+    img {
+        display: block;
+        max-width: 220px;
+    }
+
+    a {
+        text-align: center;
+    }
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 40px var(--pad-pagina);
+    background-color: rgb(201, 201, 201);
+
+    h1 {
+        display: inline;
+        margin: 0;
+        margin-right: auto;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        transition: color .25s;
+
+        svg {
+            display: block;
+        }
+
+        &.x:hover {
+            color: rgb(95, 95, 95);
+        }
+
+        &.fb:hover {
+            color: blue;
+        }
+
+        &.insta:hover {
+            color: red;
+        }
+    }
+}

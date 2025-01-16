@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 1</title>
+</head>
+
+<body>
+    <script>
+        // isto é um comentário
+        /* isto também é */
+        console.log('===declaracoes')
+
+        const vetor = [0, 1, 2, 3, 4]
+        console.log(vetor[2] * 5)
+    </script>
+    <script>
+        console.log('===comparacao')
+        const numero = 12
+        const texto = "12"
+
+        console.log(numero == texto)
+        console.log(texto == numero)
+
+        console.log(numero === texto)
+    </script>
+    <script>
+        console.log('===idade')
+        const idade = prompt('qual sua idade?', 0)
+
+        console.log(typeof idade)
+        const maiorDeIdade = idade >= 18
+
+        console.log('sua idade é: ' + idade)
+
+        if (maiorDeIdade == true) {
+            console.log('vc é maior de idade')
+        } else {
+            console.log('sai daqui mlk')
+        }
+    </script>
+</body>
+
+</html>

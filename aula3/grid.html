@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            display: grid;
+
+            /* grid-template-columns: [cinicio] 300px [c1] auto [cfim];
+            grid-template-rows: [linicio] 150px [l1] auto [l2] 150px [lfim]; */
+
+            grid-template-columns: 300px auto;
+            grid-template-rows: 150px 400px 150px;
+            grid-template-areas:
+                "header header"
+                "aside main"
+                "footer footer";
+
+            width: 800px;
+            /* height: 300px; */
+            padding: 15px;
+            background-color: antiquewhite;
+
+            header,
+            aside,
+            main,
+            footer {
+                /* width: 100px; */
+                background-color: rgb(148, 209, 211);
+            }
+
+            header {
+                background-color: rebeccapurple;
+                grid-area: header;
+            }
+
+            footer {
+                background-color: blue;
+                grid-area: footer;
+            }
+
+            aside {
+                background-color: red;
+                grid-area: aside;
+            }
+
+            main {
+                background-color: darkmagenta;
+                grid-area: main;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas:
+                    "footer footer"
+                    "main main"
+                    "header header";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header></header>
+        <aside></aside>
+        <main></main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
