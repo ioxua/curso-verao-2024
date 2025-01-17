@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <style>
+        /* exemplo de aninhamento */
+
+        /* estas duas regras são correspondentes */
+        a {
+            b {
+                /* algo aqui */
+            }
+        }
+
+        a b {
+            /* algo aqui */
+        }
+
+        /* idem para as duas próximas */
+        c {
+            &.d {
+                /* algo aqui */
+            }
+        }
+
+        c.d {
+            /* algo aqui */
+        }
+    </style>
+    <style>
+        #jogo {
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+            width: 300px;
+            height: 300px;
+            border: 1;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-size: 55px;
+                font-family: monospace;
+                cursor: pointer;
+
+                &.preenchido {
+                    cursor: not-allowed;
+                }
+
+                &.vitoria {
+                    background-color: green !important;
+                    text-decoration: line-through;
+                }
+
+                &:nth-of-type(2n+1) {
+                    background-color: rgb(160, 160, 160);
+                }
+            }
+
+            div:nth-of-type(2n) {
+                /* equivalente à regra acima */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="jogo">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <button id="reset">Resetar jogo</button>
+
+    <script src="js/jogo-da-velha.js"></script>
+</body>
+
+</html>

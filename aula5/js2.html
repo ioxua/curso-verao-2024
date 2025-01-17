@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 2</title>
+    <style>
+        #lampada {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 150px;
+
+            &.acesa {
+                #bulbo {
+                    background-color: yellow;
+                }
+
+                #fiosinho {
+                    transform: scale(.8, 1.5);
+                }
+            }
+
+            #bulbo {
+                transition: all .35s;
+                background-color: rgb(147, 147, 143);
+                width: 100px;
+                height: 100px;
+                clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 68% 100%, 32% 100%, 0% 60%, 10% 20%);
+                z-index: 1;
+
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            #filamento {
+                width: 30px;
+                height: 30px;
+                border-radius: 15px 15px 0 0;
+                background-color: white;
+            }
+
+            #base {
+                background-color: slategray;
+                width: 24%;
+                height: 30px;
+                border-radius: 0 0 15px 15px;
+                z-index: 1;
+            }
+
+            #fiosinho {
+                background-color: black;
+                width: 10px;
+                height: 30px;
+                cursor: pointer;
+                transition: all .15s;
+                z-index: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading-legal">Meu heading legal</h1>
+
+    <h1>Lâmpada</h1>
+    <div id="lampada">
+        <div id="bulbo">
+            <div id="filamento"></div>
+        </div>
+        <div id="base"></div>
+        <div id="fiosinho" data-fiosinho></div>
+    </div>
+
+    <script src="src/functions.js"></script>
+    <script src="src/closure.js"></script>
+    <script src="src/dom.js"></script>
+    <script src="src/events.js"></script>
+    <script src="src/scope.js"></script>
+</body>
+
+</html>
