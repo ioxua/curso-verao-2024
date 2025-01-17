@@ -69,6 +69,7 @@ function destacarVitoria(posicao) {
 function limparTabuleiro() {
     state.tabuleiro = [null, null, null, null, null, null, null, null, null]
     state.vezDoPrimeiro = true
+    state.jogoRolando = true
     for (const el of espacos) {
         el.innerText = ""
         el.classList.remove('preenchido', 'vitoria')
