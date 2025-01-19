@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburguer</title>
+    <style>
+        nav {
+            /* display: flex; */
+            padding: 12px 4px;
+            background-color: goldenrod;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 12px;
+
+            /* li {
+                display: inline;
+            } */
+        }
+
+        #burguer {
+            display: none;
+        }
+
+        @media (max-width: 700px) {
+            #burguer {
+                display: block;
+                cursor: pointer;
+                align-self: end;
+                order: -1;
+            }
+
+            nav {
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                ul {
+                    display: none;
+                }
+
+                &.aberto {
+                    ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="menu">
+        <div class="content">
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+            </ul>
+            <div id="burguer">
+                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const burguer = document.getElementById('burguer')
+        const menu = document.getElementById('menu')
+
+        function onClickBurguer() {
+            menu.classList.toggle('aberto')
+        }
+
+        // essas duas linhas fazem o mesmo:
+        // burguer.onclick = onClickBurguer
+        burguer.addEventListener('click', onClickBurguer)
+    </script>
+</body>
+
+</html>
