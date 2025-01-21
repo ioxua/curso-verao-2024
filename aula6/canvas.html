@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas!</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            border: 2px dashed black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="tela" width="800" height="600"></canvas>
+    <div>
+        <fieldset>
+            <legend>Configurações</legend>
+            <input type="color" id="cor">
+            <input type="range" id="tamanho" min="5" max="100" step="5">
+            <select name="" id="tipo">
+                <option value="quadrado">Quadrado</option>
+                <option value="circulo">Círculo</option>
+            </select>
+        </fieldset>
+    </div>
+    <script src="js/paint.js"></script>
+</body>
+
+</html>
