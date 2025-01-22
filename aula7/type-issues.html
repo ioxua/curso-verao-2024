@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type issues</title>
+</head>
+
+<body>
+    <script>
+        function construirInstanciaCliente(nome) {
+            return {
+                nome: nome,
+            }
+        }
+
+        class Cliente {
+            constructor(nome) {
+                this.nome = nome
+            }
+        }
+
+        function cadastraCliente(cliente) {
+            console.log('recebi:', cliente)
+            console.log('cadastrando o cliente: ' + cliente.nome)
+        }
+
+        cadastraCliente(new Cliente('joão da silva'))
+        cadastraCliente('asdasd')
+    </script>
+</body>
+
+</html>
