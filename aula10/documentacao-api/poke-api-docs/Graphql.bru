@@ -6,6 +6,24 @@ meta {
 
 post {
   url: https://beta.pokeapi.co/graphql/v1beta
-  body: none
+  body: graphql
   auth: none
+}
+
+body:graphql {
+  query minhaQueryLegal {
+    pokemon_v2_pokemon {
+      name
+      height
+      weight
+      pokemon_v2_pokemonabilities {
+        pokemon_v2_ability {
+          name
+          id
+        }
+      }
+    }
+  }
+  
+  
 }
